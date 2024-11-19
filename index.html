@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Breakout Game</title>
+    </head>
+    <!--Nakon učitavanja web stranice (događaj onLoad), igra počinje-->
+    <body onload="startGame()">
+        <!--Div za opcionalni unos parametara-->
+        <div id="dataDiv">
+            <!--Div za početak igre s predefiniranim vrijednostima-->
+            <div class="startDiv">
+                <label>Unesite tražene vrijednosti ili kliknite "Počni" za predefinirane vrijednosti</label>
+                <button id="btnStart">Počni</button>
+            </div>
+            <!--Div za unos broja cigli-->
+            <div class="numDiv">
+                <label for="userNumBricks">Unesite broj cigli: </label>
+                <input type="text" name="userNumBricks" id="userNumBricks">
+            </div>
+            <!--Div za unos brzine loptice-->
+            <div class="speedDiv">
+                <label for="userSpeed">Unesite brzinu loptice: </label>
+                <input type="text" name="userSpeed" id="userSpeed">
+            </div>
+            <button id="btnSend">Pošalji</button>
+        </div>
+        <!--Audio za sudar loptice s ciglom-->
+        <audio id="audio1">
+            <source src="audio1.ogg" type="audio/ogg">
+        </audio>
+        <!--Audio za sudar loptice s palicom-->
+        <audio id="audio2">
+            <source src="audio2.ogg" type="audio/ogg">
+        </audio>
+        <!--Audio za sudar loptice s rubovima canvasa-->
+        <audio id="audio3">
+            <source src="audio3.ogg" type="audio/ogg">
+        </audio>
+        <script src="index.js"></script>
+    </body>
+</html>
